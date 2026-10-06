@@ -3,31 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E & F Library</title>
+    <title>Library Page</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="container">
-        <h1>Library Catalog</h1>
-        
-        <!--Book Form -->
-        <form id="bookform" class="form-container">
-            <input type="text" id="title" placeholder="Book Title" required>
-            <input type="text" id="author" placeholder="Author Name" required>
-            
-            <div class="button-group">
-                <button type="submit" id="addBookBtn">Add Book</button>
-                <!--Form Clear Button (See issue explanation below)-->
-                <button type="button" id="clearBtn" class="btn-clear">Clear Form</button>
-            </div>
-        </form>
-
-        <!--Book Shelf Display-->
-        <div class="library-shelf" id="shelfDisplay">
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">📚 Moru Library</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#catalog">Catalog</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button class="btn-secondary">Sign In</button>
+            <button class="btn-primary">Register</button>
         </div>
-    </div>
+    </header>
 
+    <!-- Hero Section with Search -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover Your Next Great Read</h1>
+            <p>Explore thousands of books, journals, and digital resources instantly.</p>
+            <div class="search-box">
+                <input type="text" placeholder="Search by title, author, or ISBN...">
+                <button class="btn-primary">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Book Catalog Section -->
+    <section id="catalog" class="catalog-section">
+        <h2>Featured Books</h2>
+        <div class="book-grid">
+            
+            <!-- Book Card 1 -->
+            <div class="book-card">
+                <div class="book-cover">📖</div>
+                <div class="book-info">
+                    <h3>Clean Code</h3>
+                    <p class="author">By Robert C. Martin</p>
+                    <span class="badge available">Available</span>
+                    <button class="btn-outline">Borrow Book</button>
+                </div>
+            </div>
+
+            <!-- Book Card 2 -->
+            <div class="book-card">
+                <div class="book-cover">💻</div>
+                <div class="book-info">
+                    <h3>The Pragmatic Programmer</h3>
+                    <p class="author">By Andrew Hunt & David Thomas</p>
+                    <span class="badge available">Available</span>
+                    <button class="btn-outline">Borrow Book</button>
+                </div>
+            </div>
+
+            <!-- Book Card 3 -->
+            <div class="book-card">
+                <div class="book-cover">🚀</div>
+                <div class="book-info">
+                    <h3>Designing Data-Intensive Applications</h3>
+                    <p class="author">By Martin Kleppmann</p>
+                    <span class="badge borrowed">Checked Out</span>
+                    <button class="btn-outline" disabled>Join Waitlist</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+ 
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Moru Library Hub. All rights reserved.</p>
+    </footer>
+
+    <!-- Link the JavaScript file -->
     <script src="script.js"></script>
+</body>
+</html>
+
+</body>
+</html>
 </body>
 </html>
