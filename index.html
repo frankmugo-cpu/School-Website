@@ -77,10 +77,28 @@
     <title>E & F Library</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body>  
 
-    <div class="container">
-        <h1>Library Catalog</h1>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">📚 Moru Library</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search.html" class="active">Search Catalog</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button class="btn-secondary">Sign In</button>
+        </div>
+    </header>
+
+    <!-- Search Page Header -->
+    <section class="search-header">
+        <h1>Advanced Book Search</h1>
+        <p>Find books by title, author, category, or availability status.</p>
         
         <!--Book Form -->
         <form id="bookform" class="form-container">
@@ -119,10 +137,5 @@
 
     <!-- Link the JavaScript file -->
     <script src="script.js"></script>
-</body>
-</html>
-
-</body>
-</html>
 </body>
 </html>
