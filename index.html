@@ -74,8 +74,41 @@
                     <span class="badge borrowed">Checked Out</span>
                     <button class="btn-outline" disabled>Join Waitlist</button>
                 </div>
+    <title>E & F Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Library Catalog</h1>
+        
+        <!--Book Form -->
+        <form id="bookform" class="form-container">
+            <input type="text" id="title" placeholder="Book Title" required>
+            <input type="text" id="author" placeholder="Author Name" required>
+
+            <select id="inputstatus">
+                <option value="Unread">Unread</option>
+                <option value="Read">Read</option>
+            </select>
+
+            <div class="button-group">
+                <button type="submit" id="addBookBtn">Add Book</button>
+                <!--Form Clear Button (See issue explanation below)-->
+                <button type="button" id="clearBtn" class="btn-clear">Clear Form</button>
             </div>
 
+        <!--search & Stats Bar-->
+        <div class="catalog-header">
+            <input type="text" id="searchInput" placeholder="Search catalog...">
+            <p id="counter">Total Books: <span id="bookCount">0</span></p>
+        </div>
+
+        <!--Empty state message-->
+        <p id="emptyMessage" class="empty-message">No books in the library.</p>
+
+        <!--Book Shelf Display-->
+        <div class="library-shelf" id="shelfDisplay">
         </div>
     </section>
  
