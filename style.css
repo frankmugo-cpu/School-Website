@@ -1,0 +1,93 @@
+/* Feedback Page Styles */
+.feedback-header {
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.feedback-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.feedback-header p {
+    color: #e2e8f0;
+}
+
+.feedback-container {
+    max-width: 650px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.feedback-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #334155;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #2563eb;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+
+/* Success Banner State */
+.success-banner {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.success-banner h3 {
+    color: #15803d;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.success-banner p {
+    color: #475569;
+    margin-bottom: 1.5rem;
+}
+
+.reset-btn {
+    margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .feedback-card {
+        padding: 1.5rem;
+    }
+}
