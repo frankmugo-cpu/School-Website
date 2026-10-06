@@ -1,0 +1,4 @@
+/* Utility class for live search filtering */
+.book-card.hidden {
+    display: none;
+}
