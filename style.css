@@ -1,0 +1,57 @@
+/* Search Page Specific Styles */
+.search-header {
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.search-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.search-header p {
+    color: #e2e8f0;
+    margin-bottom: 2rem;
+}
+
+.search-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.search-controls input,
+.search-controls select {
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    flex: 1;
+    min-width: 200px;
+}
+
+.search-controls input:focus,
+.search-controls select:focus {
+    border-color: #2563eb;
+}
+
+.no-results {
+    text-align: center;
+    color: #64748b;
+    font-size: 1.1rem;
+    margin: 3rem 0;
+}
+
+.hidden {
+    display: none !important;
+}

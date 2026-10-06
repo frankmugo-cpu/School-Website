@@ -3,31 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E & F Library</title>
+    <title>Book Search Page</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body>  
 
-    <div class="container">
-        <h1>Library Catalog</h1>
-        
-        <!--Book Form -->
-        <form id="bookform" class="form-container">
-            <input type="text" id="title" placeholder="Book Title" required>
-            <input type="text" id="author" placeholder="Author Name" required>
-            
-            <div class="button-group">
-                <button type="submit" id="addBookBtn">Add Book</button>
-                <!--Form Clear Button (See issue explanation below)-->
-                <button type="button" id="clearBtn" class="btn-clear">Clear Form</button>
-            </div>
-        </form>
 
-        <!--Book Shelf Display-->
-        <div class="library-shelf" id="shelfDisplay">
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">📚 Moru Library</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search.html" class="active">Search Catalog</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button class="btn-secondary">Sign In</button>
         </div>
-    </div>
+    </header>
 
-    <script src="script.js"></script>
+    <!-- Search Page Header -->
+    <section class="search-header">
+        <h1>Advanced Book Search</h1>
+        <p>Find books by title, author, category, or availability status.</p>
+        
+        <!-- Search Controls -->
+        <div class="search-controls">
+            <input type="text" id="searchInput" placeholder="Search by title or author...">
+            
+            <select id="categoryFilter">
+                <option value="all">All Categories</option>
+                <option value="programming">Programming</option>
+                <option value="databases">Databases</option>
+                <option value="architecture">Architecture</option>
+            </select>
+
+            <select id="availabilityFilter">
+                <option value="all">All Status</option>
+                <option value="available">Available</option>
+                <option value="borrowed">Checked Out</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Search Results Section -->
+    <section class="catalog-section">
+        <div id="noResults" class="no-results hidden">No books found matching your criteria.</div>
+        <div class="book-grid" id="bookGrid">
+            
+            <!-- Book 1 -->
+            <div class="book-card" data-category="programming" data-status="available">
+                <div class="book-cover">📖</div>
+                <div class="book-info">
+                    <h3>Clean Code</h3>
+                    <p class="author">By Robert C. Martin</p>
+                    <span class="badge available">Available</span>
+                    <button class="btn-outline">Borrow Book</button>
+                </div>
+            </div>
+
+            <!-- Book 2 -->
+            <div class="book-card" data-category="programming" data-status="available">
+                <div class="book-cover">💻</div>
+                <div class="book-info">
+                    <h3>The Pragmatic Programmer</h3>
+                    <p class="author">By Andrew Hunt & David Thomas</p>
+                    <span class="badge available">Available</span>
+                    <button class="btn-outline">Borrow Book</button>
+                </div>
+            </div>
+
+            <!-- Book 3 -->
+            <div class="book-card" data-category="architecture" data-status="borrowed">
+                <div class="book-cover">🚀</div>
+                <div class="book-info">
+                    <h3>Designing Data-Intensive Applications</h3>
+                    <p class="author">By Martin Kleppmann</p>
+                    <span class="badge borrowed">Checked Out</span>
+                    <button class="btn-outline" disabled>Join Waitlist</button>
+                </div>
+            </div>
+
+            <!-- Book 4 -->
+            <div class="book-card" data-category="databases" data-status="available">
+                <div class="book-cover">🗄️</div>
+                <div class="book-info">
+                    <h3>SQL and Relational Theory</h3>
+                    <p class="author">By C.J. Date</p>
+                    <span class="badge available">Available</span>
+                    <button class="btn-outline">Borrow Book</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Moru Library Hub. All rights reserved.</p>
+    </footer>
+
+    <script src="search.js"></script>
+
 </body>
 </html>
